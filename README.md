@@ -8,6 +8,7 @@
 - **Location:** 110 Castlereagh St, NSW 2170
 - **Facebook:** https://www.facebook.com/hashish.highkage
 - **Instagram:** https://www.instagram.com/hashish_highkage
+- **Live Website:** subedi-thapa-rental-app-ashish-bijay-313.azurewebsites.net
 
 ## Project Overview
 
@@ -43,6 +44,4 @@ GitHub Actions runs Terraform and deploys the Node.js web app to Azure App Servi
 
 ## Health Check
 
-After deployment, test:
-
-`https://<your-web-app-name>.azurewebsites.net/health`
+`subedi-thapa-rental-app-ashish-bijay-313.azurewebsites.net/health`
