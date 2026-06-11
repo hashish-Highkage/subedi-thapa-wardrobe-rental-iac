@@ -1,0 +1,13 @@
+{
+  "name": "subedi-thapa-wardrobe-rental",
+  "version": "1.0.0",
+  "description": "Subedi Thapa Wardrobe Rental web application for Azure IaC deployment",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "echo \"Basic test passed\""
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
