@@ -10,38 +10,134 @@
 - **Instagram:** https://www.instagram.com/hashish_highkage
 - **Live Website:** subedi-thapa-rental-app-ashish-bijay-313.azurewebsites.net
 
+# Subedi & Thapa Wardrobe Rental – Cloud IaC Deployment
+
 ## Project Overview
 
-This repository contains a clothing rental website hosted as a Node.js Express application and prepared for deployment to Microsoft Azure App Service using Terraform and GitHub Actions.
+This project is a simple cloud-based wardrobe rental web application developed for Assessment 3: Enterprise Cloud Infrastructure Design. The application allows users to view clothing rental categories, men’s and women’s clothing items, login/register pages, wishlist, cart, and contact information.
 
-The website has been customised as **Subedi Thapa Wardrobe Rental**, a simple rental platform for traditional and modern outfits. The sample product names, website branding, contact details and cloud resource names have been updated for Ashish Subedi and Bijay Thapa.
+The purpose of this project is to demonstrate cloud deployment using DevOps practices, Infrastructure as Code, and CI/CD automation.
 
-## Main Features
+## Technologies Used
 
-- Static clothing rental website with Home, Categories, Mens, Womens, Wishlist, Cart, Login, Register, About Us and Contact Us pages.
-- Custom product catalogue using renamed sample items such as Castlereagh Velvet Shirt, Sydney Printed Kurta and Harbour Tiered Dress.
-- Node.js Express server for hosting the static website.
-- `/health` endpoint for deployment testing.
-- Terraform Infrastructure as Code for Azure Resource Group, App Service Plan and Linux Web App.
-- GitHub Actions workflow for Terraform provisioning and Azure Web App deployment.
+* HTML, CSS and JavaScript for the web application
+* Node.js and Express.js to serve the static web application
+* Microsoft Azure App Service for cloud hosting
+* Terraform for Infrastructure as Code
+* GitHub Actions for CI/CD automation
+* GitHub for version control and team collaboration
 
-## Project Structure
+## Cloud Architecture
 
-- `app/public/` contains the HTML, CSS and image files for the website.
-- `app/server.js` serves the static website and provides the `/health` endpoint.
-- `terraform/` contains the Infrastructure as Code files for Azure.
-- `.github/workflows/deploy.yml` contains the CI/CD pipeline.
+The application is deployed to Microsoft Azure using Terraform. The infrastructure includes:
 
-## Deployment Summary
+* Azure Resource Group
+* Azure App Service Plan
+* Azure Linux Web App
 
-Terraform provisions:
+Terraform provisions the required cloud infrastructure automatically. GitHub Actions then builds and deploys the web application to Azure App Service.
 
-- Azure Resource Group
-- Azure App Service Plan
-- Azure Linux Web App
+## Repository Structure
 
-GitHub Actions runs Terraform and deploys the Node.js web app to Azure App Service.
+```text
+subedi-thapa-wardrobe-rental-iac/
+├── app/
+│   ├── package.json
+│   ├── server.js
+│   └── public/
+│       ├── index.html
+│       ├── about-us.html
+│       ├── categories.html
+│       ├── contact-us.html
+│       ├── login.html
+│       ├── register.html
+│       ├── mens.html
+│       ├── womens.html
+│       ├── cart.html
+│       ├── wishlist.html
+│       ├── css/
+│       └── assets/
+│
+├── terraform/
+│   ├── providers.tf
+│   ├── variables.tf
+│   ├── main.tf
+│   └── outputs.tf
+│
+├── .github/
+│   └── workflows/
+│       └── deploy.yml
+│
+└── README.md
+```
 
-## Health Check
+## Infrastructure as Code
 
-`subedi-thapa-rental-app-ashish-bijay-313.azurewebsites.net/health`
+Terraform is used to create and manage the Azure infrastructure. The Terraform files are stored inside the `terraform` folder.
+
+Main Terraform files:
+
+* `providers.tf` configures the Azure provider.
+* `variables.tf` stores reusable variable values.
+* `main.tf` defines Azure infrastructure resources.
+* `outputs.tf` displays the deployed web application URL.
+
+## CI/CD Pipeline
+
+GitHub Actions is used to automate the deployment process. The workflow file is located at:
+
+```text
+.github/workflows/deploy.yml
+```
+
+The pipeline performs the following steps:
+
+1. Checks out the GitHub repository.
+2. Sets up Terraform.
+3. Runs Terraform init, validate, plan, and apply.
+4. Sets up Node.js.
+5. Installs application dependencies.
+6. Tests the application.
+7. Logs in to Azure.
+8. Deploys the application to Azure App Service.
+
+## Testing
+
+The project was tested using the following methods:
+
+* Terraform validation was completed successfully.
+* Terraform plan and apply were completed successfully.
+* GitHub Actions workflow completed successfully.
+* Azure Resource Group and App Service were created successfully.
+* The live wardrobe rental website opened successfully in the browser.
+* The `/health` endpoint confirmed that the application was running.
+
+## Live Application
+
+Live website URL:
+
+```text
+subedi-thapa-rental-app-ashish-bijay-313.azurewebsites.net
+```
+
+Health check URL:
+
+```text
+subedi-thapa-rental-app-ashish-bijay-313.azurewebsites.net/health
+```
+
+## Team Members
+
+* Ashish Subedi
+* Bijay Thapa
+
+## Individual Contributions
+
+| Team Member   | Contribution                                                                                                         |
+| ------------- | -------------------------------------------------------------------------------------------------------------------- |
+| Ashish Subedi | GitHub repository setup, web app organisation, Terraform review, deployment testing, screenshots, report preparation |
+| Bijay Thapa   | Web application customisation, Azure testing support, presentation preparation, documentation review                 |
+
+## Conclusion
+
+This project demonstrates how a simple web application can be deployed to the cloud using Infrastructure as Code and CI/CD automation. Terraform provides repeatable cloud infrastructure provisioning, while GitHub Actions automates the build and deployment process. The project also supports DevOps principles such as version control, automation, testing, collaboration, and continuous deployment.
