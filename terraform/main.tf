@@ -28,7 +28,7 @@ resource "azurerm_linux_web_app" "main" {
   }
 
   app_settings = {
-    "WEBSITE_NODE_DEFAULT_VERSION"  = "~18"
+    "WEBSITE_NODE_DEFAULT_VERSION"    = "~18"
     "SCM_DO_BUILD_DURING_DEPLOYMENT" = "true"
   }
 }
