@@ -3,9 +3,9 @@
 ## Project Owners
 
 - **Names:** Ashish Subedi & Bijay Thapa
-- **Phone:** 0470 345 646
+- **Phone:** 0470 345 ***
 - **Emails:** ashishsubedi313@gmail.com, bijaythapa@gmail.com
-- **Location:** 107 Castlereagh St, NSW 2170
+- **Location:** 110 Castlereagh St, NSW 2170
 - **Facebook:** https://www.facebook.com/hashish.highkage
 - **Instagram:** https://www.instagram.com/hashish_highkage
 
